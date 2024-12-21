@@ -35,6 +35,7 @@
 - matplotlib - version 3.8.4
 - seaborn - version 0.13.2
 - Plotly 5.22.0
+- Jupyter Notebook
 - Anaconda Navigator 2.6.3
 - Visual Studio Code 1.96.0
 

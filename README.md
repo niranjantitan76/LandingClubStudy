@@ -21,120 +21,136 @@
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
 ## Conclusions
-- Conclusion 1 from the analysis 1
-This visualization can help us understand the distribution of loan amounts in the dataset. We can see that most loans fall in the range of $5,000 to $15,000
+- Conclusion from the analysis 1
 
-![alt text](image.png)
-- Conclusion 2 from the analysis 1
-This visualization can help us understand the distribution of loans in the dataset. We can see that most loans issued in year 20011
+    Most of the loans comes under Grade and Subgrade A, B and C. 
+
+    Majority of loans had been issued in year 2011 and Jun-Dec months.
+
+    California and Newyork state has the highest no of loans issued.
 
 ![alt text](image-1.png)
+
 - Conclusion from the analysis 2
+
 ![alt text](image-2.png)
+
 - Conclusion from the analysis 3
+    This visualization can help us understand the proportion of loans that have been fully paid, charged off, or are currently in progress. We can see that the majority of loans have been fully paid.
+
 ![alt text](image-3.png)
 
 - Conclusion from the analysis 4
-**High-Risk Grades (E, F, G):**
 
-**Key Indicators:**
+    **High-Risk Grades (E, F, G):**
 
->High median interest rates, reflecting the high likelihood of default.
+    **Key Indicators:**
 
->Wider IQR and more outliers, signaling a significant variability in risk levels.
+    High median interest rates, reflecting the high likelihood of default.
 
->Risk Profile:
+    Wider IQR and more outliers, signaling a significant variability in risk levels.
 
->These grades represent borrowers with poor credit histories or unstable incomes.
+    Risk Profile:
 
->Lenders face a high risk of non-payment, which is offset by charging much higher interest rates.
+    These grades represent borrowers with poor credit histories or unstable incomes.
+
+    Lenders face a high risk of non-payment, which is offset by charging much higher interest rates.
 
 ![alt text](interestGradeBox.png)
 
 ![alt text](interestSubgrade.png)
-- Conclusion from the analysis 6
+- Conclusion from analysis 5
+
+    **Weak Correlation:**
+
+    The plot suggests no strong relationship between annual income and loan amount. Borrowers with similar incomes might request vastly different loan amounts.
+
+    This lack of correlation implies that other factors (e.g., credit score, existing debt, or risk tolerance) are influencing loan amounts.
+
+    By analyzing these metrics together, you can assess the likelihood of a loan becoming risky or defaulting. If many loans in a dataset have high late fees, outstanding principal, and low recoveries, it signals a larger risk to lenders and investors.
 
 ![alt text](image-4.png)
 
-- Conclusion from the analysis 7
+- Conclusion 1 from the analysis 6
+
+    **Debt-to-Income Ratio (DTI) and Risk:**
+
+    Negative correlation between DTI and annual income (-0.11): 
+
+    As income increases, the DTI ratio tends to decrease. A high DTI is a strong indicator of higher risk because it implies the borrower is already carrying a significant debt load relative to their income, which increases the likelihood of loan default.
+
+    The weak positive correlation with loan amount (0.15) and revolving balance (0.26) also shows that higher loan amounts and higher balances tend to go hand-in-hand with a higher DTI, which is a risk factor for default.
 
 
-![alt text](image-5.png)
-- Conclusion from the analysis 8
-![alt text](image-6.png)
-- Conclusion from the analysis 9
+    **Correlation between loan_amnt and other variables:**
 
-> **Debt-to-Income Ratio (DTI) and Risk:**
+    The loan amount (loan_amnt) has a moderate positive correlation with the interest rate (int_rate) at 0.30 and a slightly higher positive correlation with annual income (annual_inc) at 0.41.
 
-> Negative correlation between DTI and annual income (-0.11): 
+    It also has moderate positive correlations with revolving balance (revol_bal) and total accounts (total_acc).
 
-> As income increases, the DTI ratio tends to decrease. A high DTI is a strong indicator of higher risk because it implies the borrower is already carrying a significant debt load relative to their income, which increases the likelihood of loan default.
+    Interest rate correlations:
 
-> The weak positive correlation with loan amount (0.15) and revolving balance (0.26) also shows that higher loan amounts and higher balances tend to go hand-in-hand with a higher DTI, which is a risk factor for default.
+    The interest rate (int_rate) has a low positive correlation with loan amount (loan_amnt), but it has very low correlations with other variables like annual income (annual_inc) and revolving balance (revol_bal).
 
+    The heatmap reveals that loan size, DTI, and revolving balance are strong indicators of risk. Larger loans, higher DTI ratios, and high revolving balances tend to increase the likelihood of default, while high income and low DTI ratios can mitigate this risk. Lenders should focus on these variables when assessing borrower risk to better predict the likelihood of loan repayment.
 
-> **Correlation between loan_amnt and other variables:**
+![alt text](image-19.png)
+![alt text](image-18.png)
+- Conclusion 2 from the analysis 6
 
-> The loan amount (loan_amnt) has a moderate positive correlation with the interest rate (int_rate) at 0.30 and a slightly higher positive correlation with annual income (annual_inc) at 0.41.
-> It also has moderate positive correlations with revolving balance (revol_bal) and total accounts (total_acc).
-Interest rate correlations:
+    **Risk Implication:**
 
-> The interest rate (int_rate) has a low positive correlation with loan amount (loan_amnt), but it has very low correlations with other variables like annual income (annual_inc) and revolving balance (revol_bal).
+    Debt consolidation loans are often used by individuals facing financial stress or managing existing debt. Therefore, loan grades D and E, with their high frequencies for debt consolidation, may reflect higher financial distress and a higher risk of default.
 
-![alt text](image-7.png)
-- Conclusion from the analysis 10
+    Credit card loans also seem to be somewhat common in these grades, further suggesting that borrowers in these grades may have challenges managing credit and could be at risk.
 
-**Risk Implication:**
+    **Risk Insights:**
+    Debt consolidation is strongly associated with higher-risk borrowers (grades D, E, F, G and sub-grades D4, D5). Borrowers in these groups are likely facing financial struggles, making them higher-risk for loan defaults.
 
-Debt consolidation loans are often used by individuals facing financial stress or managing existing debt. Therefore, loan grades D and E, with their high frequencies for debt consolidation, may reflect higher financial distress and a higher risk of default.
+    Home improvement and small business loans, while somewhat common across sub-grades, show lower frequencies in riskier grades. These loan purposes may still indicate a level of financial planning or stability, but they are less prominent in the high-risk groups.
 
-Credit card loans also seem to be somewhat common in these grades, further suggesting that borrowers in these grades may have challenges managing credit and could be at risk.
-
-**Risk Insights:**
-Debt consolidation is strongly associated with higher-risk borrowers (grades D, E, F, G and sub-grades D4, D5). Borrowers in these groups are likely facing financial struggles, making them higher-risk for loan defaults.
-
-Home improvement and small business loans, while somewhat common across sub-grades, show lower frequencies in riskier grades. These loan purposes may still indicate a level of financial planning or stability, but they are less prominent in the high-risk groups.
-
-Credit card loans show a mixed frequency across grades and sub-grades. This could suggest that some borrowers in lower grades are using loans for credit-related needs, which can indicate over-reliance on credit, adding to the default risk.
+    Credit card loans show a mixed frequency across grades and sub-grades. This could suggest that some borrowers in lower grades are using loans for credit-related needs, which can indicate over-reliance on credit, adding to the default risk.
 
 ![alt text](image-8.png)
-- Conclusion from the analysis 11
 
-**As the loan grade decreases (from A to G), the revolving utilization increases for each loan status category.**
+- Conclusion from the analysis 7
 
-There is variation within each grade and sub-grade, with some sub-grades showing significantly higher utilization rates, especially in the "Charged Off" and "Fully Paid" categories.
+    **As the loan grade decreases (from A to G), the revolving utilization increases for each loan status category.**
+
+    There is variation within each grade and sub-grade, with some sub-grades showing significantly higher utilization rates, especially in the "Charged Off" and "Fully Paid" categories.
 
 ![alt text](image-9.png)
 
-- Conclusion from the analysis 12
+- Conclusion from the analysis 8
 
-**Fully Paid Loans:**
+    **Fully Paid Loans:**
 
-Median revolving utilization is lower compared to the other statuses.
+    Median revolving utilization is lower compared to the other statuses.
 
-Indicates that borrowers who fully repay loans tend to have more conservative credit usage.
+    Indicates that borrowers who fully repay loans tend to have more conservative credit usage.
 
-The interquartile range (IQR) shows a narrower spread, suggesting more consistent credit behavior.
-Charged Off Loans:
+    The interquartile range (IQR) shows a narrower spread, suggesting more consistent credit behavior.
+    Charged Off Loans:
 
-**Charged Off Loans:**
+    **Charged Off Loans:**
 
-Median utilization is higher than Fully Paid loans, suggesting riskier credit behavior.
+    Median utilization is higher than Fully Paid loans, suggesting riskier credit behavior.
 
-The IQR is wider, indicating a higher variability in credit usage among borrowers whose loans are charged off.
+    The IQR is wider, indicating a higher variability in credit usage among borrowers whose loans are charged off.
 
-Borrowers in this group often have high utilization, hinting at financial stress or over-leverage.
-Current Loans:
+    Borrowers in this group often have high utilization, hinting at financial stress or over-leverage.
+    Current Loans:
 
-**Current Loans:**
+    **Current Loans:**
 
-Median utilization is slightly below Charged Off loans but above Fully Paid loans.
+    Median utilization is slightly below Charged Off loans but above Fully Paid loans.
 
-Reflects borrowers who are actively paying loans but may have higher revolving credit balances.
+    Reflects borrowers who are actively paying loans but may have higher revolving credit balances.
 
-IQR suggests a moderate spread, showing variability in usage but less than Charged Off loans.
+    IQR suggests a moderate spread, showing variability in usage but less than Charged Off loans.
 
 ![alt text](revolvingBox.png)
+
 - Conclusion from the analysis 13
 ![alt text](image-10.png)
 - Conclusion from the analysis 14

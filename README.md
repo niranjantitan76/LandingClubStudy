@@ -75,14 +75,14 @@ Conduct bivariate analysis to explore relationships between different variables 
 
 - **Income Distribution:** The right-skewed distribution of annual_inc suggests that a majority of borrowers have lower incomes. Borrowers with lower incomes may have limited capacity to repay loans, particularly if they have taken on larger amounts or have high interest rates.
 
-![alt text](image-2.png)
+![alt text](image-5.png)
 
 ## Conclusion from Pie Plot (Loan Status, Grades and Purpose) Categorical Univariate Analysis 3
     This visualization can help us understand the proportion of loans that have been fully paid, charged off, or are currently in progress. 
     - We can see that the majority of loans have been fully paid.
     - Most of the loans are for debt consolidation
 
-![alt text](image-3.png)
+![alt text](image-7.png)
 
 ## Conclusion from Box Plot (Interest Rate by Grade,  Sub Grade and Loan Status) Byvariate Categorical Analysis 4 
 
@@ -147,7 +147,7 @@ Conduct bivariate analysis to explore relationships between different variables 
 
     The heatmap reveals that loan size, DTI, and revolving balance are strong indicators of risk. Larger loans, higher DTI ratios, and high revolving balances tend to increase the likelihood of default, while high income and low DTI ratios can mitigate this risk. Lenders should focus on these variables when assessing borrower risk to better predict the likelihood of loan repayment.
 
-![alt text](image-19.png)
+![alt text](image-2.png)
 
 ### Correlation Heat Map (Categorical Features) Analysis
 
@@ -234,7 +234,7 @@ Conduct bivariate analysis to explore relationships between different variables 
 
  - **Loan Distribution:** The vast majority of loans are held by individuals with no public record bankruptcies. The number of loans decreases significantly as the number of bankruptcies increases.
 
-![alt text](image-27.png)
+![alt text](image-3.png)
 
 ## Conclusion from the box plot Recovery Rate Analysis 11
 

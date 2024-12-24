@@ -22,14 +22,14 @@
 - What is the business probem that your project is trying to solve?
 
     Understanding the driving factors (or driver variables) behind loan default, i.e. the variables which are strong indicators of default.
-- ## Problem Statement:
+## Problem Statement:
 
     Conduct a comprehensive analysis of a dataset containing consumer attributes and loan attributes. Our goal is to gain insights into the factors influencing loan default rates and to develop strategies to mitigate risks associated with lending.
 - What is the dataset that is being used?
 
     The dataset contains information about past loan applicants and whether they ‘defaulted’ or not. The aim is to identify patterns which indicate if a person is likely to default, which may be used for taking actions such as denying the loan, reducing the amount of loan, lending (to risky applicants) at a higher interest rate, etc.
-- ## Objective
-
+## Objective
+- 
     **Importing necessary Modules**:
     - Import the modules necessary for Data Manipulation and Visualization.
 
@@ -56,7 +56,7 @@
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
 ## Conclusions
-- Conclusion from the Categorical Univariate Analysis -1
+# - Conclusion from the Categorical Univariate Analysis -1
 
     Most of the loans comes under Grade and Subgrade A, B and C. 
 
@@ -66,17 +66,17 @@
 
 ![alt text](image-1.png)
 
-- Conclusion from the Univariate Numerical Analysis 2
+# - Conclusion from the Univariate Numerical Analysis 2
 
-**High Loan Amounts:** The right-skewed distribution of loan_amnt suggests that a significant proportion of loans are for larger amounts. Larger loans generally carry higher risk due to the potential for larger losses in case of default.
+    **High Loan Amounts:** The right-skewed distribution of loan_amnt suggests that a significant proportion of loans are for larger amounts. Larger loans generally carry higher risk due to the potential for larger losses in case of default.
 
-**High Interest Rates:** The right-skewed distribution of int_rate indicates that a portion of loans have significantly higher interest rates. These loans are often associated with higher risk borrowers and may have a higher likelihood of default.
+    **High Interest Rates:** The right-skewed distribution of int_rate indicates that a portion of loans have significantly higher interest rates. These loans are often associated with higher risk borrowers and may have a higher likelihood of default.
 
-**Income Distribution:** The right-skewed distribution of annual_inc suggests that a majority of borrowers have lower incomes. Borrowers with lower incomes may have limited capacity to repay loans, particularly if they have taken on larger amounts or have high interest rates.
+    **Income Distribution:** The right-skewed distribution of annual_inc suggests that a majority of borrowers have lower incomes. Borrowers with lower incomes may have limited capacity to repay loans, particularly if they have taken on larger amounts or have high interest rates.
 
 ![alt text](image-2.png)
 
-- Conclusion from Pie Plot (Loan Status, Grades and Purpose) Categorical Univariate Analysis 3
+# - Conclusion from Pie Plot (Loan Status, Grades and Purpose) Categorical Univariate Analysis 3
 
     This visualization can help us understand the proportion of loans that have been fully paid, charged off, or are currently in progress. 
     - We can see that the majority of loans have been fully paid.
@@ -84,7 +84,7 @@
 
 ![alt text](image-3.png)
 
-- Conclusion from Box Plot (Interest Rate by Grade,  Sub Grade and Loan Status) Byvariate Categorical Analysis 4 
+# - Conclusion from Box Plot (Interest Rate by Grade,  Sub Grade and Loan Status) Byvariate Categorical Analysis 4 
 
     High-Risk Grades (E, F, G):
 
@@ -104,7 +104,7 @@
 ![alt text](irOwnershipBox.png)
 ![alt text](interestRatePurposeBox.png)
 
-- Conclusion from Scatter Plot Numerical Byvariate Analysis 5
+# - Conclusion from Scatter Plot Numerical Byvariate Analysis 5
 
     **Weak Correlation:**
 
@@ -114,7 +114,7 @@
 
 ![alt text](image-4.png)
 
-- Conclusion from Univariate and Byvariate Analysis 6 (Risky Loans) 
+# - Conclusion from Univariate and Byvariate Analysis 6 (Risky Loans) 
 
     **Loan Grades & Sub-Grades:** The distribution shows a concentration of risky loans in the lower grades (E, F, G) and their corresponding sub-grades. This aligns with expectations as lower grades typically represent higher risk.
 
@@ -129,7 +129,7 @@
 
 ![alt text](image-31.png)
 
- - **Correlation Heat Map (Numerical Features) Bivariate Analysis**
+ # - **Correlation Heat Map (Numerical Features) Bivariate Analysis**
 
     Negative correlation between DTI and annual income (-0.11): 
 
@@ -150,7 +150,7 @@
 
 ![alt text](image-19.png)
 
-- # Correlation Heat Map (Categorical Features) Analysis
+# - # Correlation Heat Map (Categorical Features) Analysis
 
     Debt consolidation is strongly associated with higher-risk borrowers (grades D, E, F, G and sub-grades D4, D5). Borrowers in these groups are likely facing financial struggles, making them higher-risk for loan defaults.
 
@@ -160,7 +160,7 @@
 
 ![alt text](image-30.png)
 
-- Conclusion from the Revolving Utilization Heatmap Analysis 7
+# - Conclusion from the Revolving Utilization Heatmap Analysis 7
 
     **Sub Grade**
 
@@ -191,7 +191,7 @@
 
 ![alt text](image-32.png)
 
-- Conclusion from the Box Plot (Loan Status vs Revolving Utilization) Analysis 8
+# - Conclusion from the Box Plot (Loan Status vs Revolving Utilization) Analysis
 
     **Fully Paid Loans:**
 
@@ -221,7 +221,7 @@
 
 ![alt text](revolvingBox.png)
 
-- Conclusion from the Bar Plot (Loan Status by Employment Length, Verification Status etc) analysis 8
+# - Conclusion from the Bar Plot (Loan Status by Employment Length, Verification Status etc) analysis 8
 
     **Employment Length and Loan Status:**
     
@@ -261,7 +261,7 @@
 ![alt text](image-21.png)
 ![alt text](image-22.png)
 
-- Conclusion from Bar Plot (Loan Status by Home Ownership) Analysis 9
+# - Conclusion from Bar Plot (Loan Status by Home Ownership) Analysis 9
 
     **Home Ownership and Interest Rates:** 
     The box plot suggests a general trend that individuals with "NONE" or "OTHER" home ownership status tend to have lower interest rates compared to those who mortgage, rent, or own their homes.
@@ -279,21 +279,21 @@
 ![alt text](image-25.png)
 ![alt text](image-26.png)
 
-- Conclusion from the Bar Chart (Bankruptcies and Loan Status) Analysis  10
+# - Conclusion from the Bar Chart (Bankruptcies and Loan Status) Analysis  10
 
     **Bankruptcies and Loan Status:** The chart shows a clear trend: as the number of public record bankruptcies increases, the proportion of "Charged Off" loans also increases. This suggests that borrowers with a history of bankruptcies are more likely to default on their loans.
 
     **Loan Distribution:** The vast majority of loans are held by individuals with no public record bankruptcies. The number of loans decreases significantly as the number of bankruptcies increases.
 
-    ![alt text](image-27.png)
+![alt text](image-27.png)
 
-- Conclusion from the box plot Recovery Rate Analysis 11
+# - Conclusion from the box plot Recovery Rate Analysis 11
 
     **Low Recovery Rates:** The box plot indicates that recoveries for "Charged Off" loans are generally low. This highlights the significant credit risk associated with these loans and the potential for substantial losses for the lender.
 
 ![alt text](image-28.png)
 
-- Conclusion from the Scatter Plot Analysis 12
+# - Conclusion from the Scatter Plot Analysis 12
 
     Loan repayment (total_pymnt) strongly depends on the funded amount.
 
@@ -304,7 +304,7 @@
     **Low Income:** Borrowers with low annual_inc might have limited capacity to repay loans, particularly if they have taken on large funded_amnt.
     **Loan Size:** Large funded_amnt loans generally carry higher risk due to the potential for larger losses in case of default.
 
-    ![alt text](image-29.png)
+![alt text](image-29.png)
 
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
@@ -327,7 +327,7 @@ Give credit here.
 - This project was based on [this tutorial](https://www.upgrad.com/).
 
 ## Contact
-Created by [Niranjan Singh and  ] - feel free to contact me!
+Created by [Niranjan Singh and Ameya Parab ] - feel free to contact me!
 
 <!-- Optional -->
 <!-- ## License -->

@@ -87,12 +87,14 @@ Conduct bivariate analysis to explore relationships between different variables 
 ## Conclusion from Box Plot (Interest Rate by Grade,  Sub Grade and Loan Status) Byvariate Categorical Analysis 4 
 
  - **High-Risk Grades (E, F, G):**
- 
+
     High median interest rates, reflecting the high likelihood of default.
     Wider IQR and more outliers, signaling a significant variability in risk levels.
     These grades represent borrowers with poor credit histories or unstable incomes.
     Lenders face a high risk of non-payment, which is offset by charging much higher interest rates.
-    Current and default loan staus have highr interest rates than fully paid.
+
+ - **Current and default loan staus have highr interest rates than fully paid.**
+ - **Analysis reveals significant variation in interest rates depending on the loan purpose. Notably, Debt Consolidation and Small Business loans tend to have higher interest rates compared to other loan categories.**
 
 ![alt text](interestGradeBox.png)
 ![alt text](interestSubgrade.png)
@@ -117,11 +119,12 @@ Conduct bivariate analysis to explore relationships between different variables 
  - **Loan Status:** A significant portion of risky loans are either "Charged Off" (defaulted) or still "Current" (ongoing). This highlights the ongoing risk associated with these loans.
 
  - **Interest Rates:** Risky loans consistently have higher interest rates compared to non-risky loans, indicating the lender's assessment of increased risk.
-    Loan Purposes: Debt consolidation and credit card loans appear to be the most common purposes for risky loans. This suggests that borrowers struggling with existing debt may be more likely to take on higher-risk loans.
+ 
+ - **Loan Purposes:** Debt consolidation and credit card loans appear to be the most common purposes for risky loans. This suggests that borrowers struggling with existing debt may be more likely to take on higher-risk loans.
 
  - **State Distribution:** The distribution of risky loans across states is not uniform. Some states have a higher concentration of risky loans compared to others, potentially indicating regional differences in risk factors.
 
-    We can see that the majority of loans are for credit card debt consolidation, followed by other purposes such as home improvement and small business loans.
+- **Home Owners** We can see that the majority of loans are under rented and mortgage ownership.
 
 ![alt text](image-31.png)
 
@@ -148,69 +151,24 @@ Conduct bivariate analysis to explore relationships between different variables 
 
 ### Correlation Heat Map (Categorical Features) Analysis
 
-- Debt consolidation is strongly associated with higher-risk borrowers (grades D, E, F, G and sub-grades D4, D5). Borrowers in these groups are likely facing financial struggles, making them higher-risk for loan defaults.
-
-- Home improvement and small business loans, while somewhat common across sub-grades, show lower frequencies in riskier grades. These loan purposes may still indicate a level of financial planning or stability, but they are less prominent in the high-risk groups.
-
-- Credit card loans show a mixed frequency across grades and sub-grades. This could suggest that some borrowers in lower grades are using loans for credit-related needs, which can indicate over-reliance on credit, adding to the default risk.
+- Debt consolidation is strongly associated with higher-risk borrowers (grades D, E, F, G, sub-grades D4, D5). Borrowers in these groups are likely facing financial struggles, making them higher-risk for loan defaults.
+- Debt consolidation is the primary purpose driving risky loans, often concentrated among renters and mortgaged homeowners.
+- Renters exhibit higher risk levels compared to homeowners, which aligns with their larger proportion of "Charged Off" loans.
 
 ![alt text](image-30.png)
 
 ## Conclusion from the Revolving Utilization Heatmap Analysis 7
   
-- **Sub Grade**
-
-    Borrowers with sub-grades in the F and G categories represent high-risk groups due to their high revolving utilization. These borrowers are more likely to default or struggle with repayments.
-
-    Borrowers with lower sub-grades (e.g., A and B) tend to use credit sparingly, making them safer for lenders.
-
-    Higher sub-grade borrowers (E, F, G) exhibit risky behavior with higher utilization, potentially signaling over-leverage or poor financial management.
-
-
-- **Grade**
-    As the loan grade decreases (from A to G), the revolving utilization increases for each loan status category.
-
-    There is variation within each grade and sub-grade, with some sub-grades showing significantly higher utilization rates, especially in the "Charged Off" and "Fully Paid" categories.
-
-
-- **Loan Status Analysis:**
-
-    Charged Off loans have significantly higher utilization compared to fully paid loans across all sub-grades, confirming that revolving utilization is a key risk indicator for defaults.
-
-    Current loans are intermediate, showing higher utilization than fully paid loans but lower than charged off loans, reflecting their ongoing risk exposure.
-
-    Lower sub-grades (A and B categories) demonstrate strong financial discipline, with consistently low utilization, even for charged-off loans.
-
-    Borrowers in sub-grades G2, G3, and G4 are outliers with dangerously high utilization, particularly for charged-off and current loans.
+- **Revolving Utilization and Loan Status:** The heatmaps clearly show that revolving utilization tends to be higher for "Charged Off" loans compared to "Current" and "Fully Paid" loans across various categories (grade, sub-grade, purpose, home ownership).
+- **Grade and Sub-Grade:** Revolving utilization generally increases as the loan grade and sub-grade deteriorate (from A to G). This is consistent with the expectation that higher-risk borrowers tend to have higher credit utilization.
+- **Loan Purpose:** The heatmaps reveal that some loan purposes, such as "credit_card" and "debt_consolidation," tend to have higher revolving utilization compared to others. This suggests that borrowers taking out these types of loans might have higher existing debt burdens.
+- **Home Ownership:** The heatmap for home ownership shows some interesting patterns. For instance, borrowers with "RENT" status seem to have higher revolving utilization compared to those with "MORTGAGE" or "OWN".
 
 ![alt text](image-32.png)
 
 ### Conclusion from the Box Plot (Loan Status vs Revolving Utilization) Analysis
 
-- **Fully Paid Loans:**
-
-    Median revolving utilization is lower compared to the other statuses.
-
-    Indicates that borrowers who fully repay loans tend to have more conservative credit usage.
-
-    The interquartile range (IQR) shows a narrower spread, suggesting more consistent credit behavior.
-
-- **Charged Off Loans:**
-
-    Median utilization is higher than Fully Paid loans, suggesting riskier credit behavior.
-
-    The IQR is wider, indicating a higher variability in credit usage among borrowers whose loans are charged off.
-
-    Borrowers in this group often have high utilization, hinting at financial stress or over-leverage.
-    Current Loans:
-
-- **Current Loans:**
-
-    Median utilization is slightly below Charged Off loans but above Fully Paid loans.
-
-    Reflects borrowers who are actively paying loans but may have higher revolving credit balances.
-
-    IQR suggests a moderate spread, showing variability in usage but less than Charged Off loans.
+- **Revolving Utilization and Loan Status:** The box plot clearly shows that "Charged Off" loans tend to have significantly higher revolving utilization compared to "Fully Paid" and "Current" loans. This suggests that borrowers with higher credit card debt relative to their credit limit are more likely to default on their loans
 
 ![alt text](revolvingBox.png)
 

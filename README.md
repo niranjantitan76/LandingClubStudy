@@ -69,11 +69,11 @@ Conduct bivariate analysis to explore relationships between different variables 
 
 ## Conclusion from the Univariate Numerical Analysis 2
 
--    **High Loan Amounts:** The right-skewed distribution of loan_amnt suggests that a significant proportion of loans are for larger amounts. Larger loans generally carry higher risk due to the potential for larger losses in case of default.
+- **High Loan Amounts:** The right-skewed distribution of loan_amnt suggests that a significant proportion of loans are for larger amounts. Larger loans generally carry higher risk due to the potential for larger losses in case of default.
 
--    **High Interest Rates:** The right-skewed distribution of int_rate indicates that a portion of loans have significantly higher interest rates. These loans are often associated with higher risk borrowers and may have a higher likelihood of default.
+- **High Interest Rates:** The right-skewed distribution of int_rate indicates that a portion of loans have significantly higher interest rates. These loans are often associated with higher risk borrowers and may have a higher likelihood of default.
 
--    **Income Distribution:** The right-skewed distribution of annual_inc suggests that a majority of borrowers have lower incomes. Borrowers with lower incomes may have limited capacity to repay loans, particularly if they have taken on larger amounts or have high interest rates.
+- **Income Distribution:** The right-skewed distribution of annual_inc suggests that a majority of borrowers have lower incomes. Borrowers with lower incomes may have limited capacity to repay loans, particularly if they have taken on larger amounts or have high interest rates.
 
 ![alt text](image-2.png)
 
@@ -86,7 +86,7 @@ Conduct bivariate analysis to explore relationships between different variables 
 
 ## Conclusion from Box Plot (Interest Rate by Grade,  Sub Grade and Loan Status) Byvariate Categorical Analysis 4 
 
- -   **High-Risk Grades (E, F, G):**
+ - **High-Risk Grades (E, F, G):**
 
     High median interest rates, reflecting the high likelihood of default.
 
@@ -106,7 +106,7 @@ Conduct bivariate analysis to explore relationships between different variables 
 
 ## Conclusion from Scatter Plot Numerical Byvariate Analysis 5
 
- -   **Weak Correlation:**
+ - **Weak Correlation:**
 
     The plot suggests no strong relationship between annual income and loan amount. Borrowers with similar incomes might request vastly different loan amounts.
 
@@ -116,14 +116,14 @@ Conduct bivariate analysis to explore relationships between different variables 
 
 ## Conclusion from Univariate and Byvariate Analysis 6 (Risky Loans) 
 
- -   **Loan Grades & Sub-Grades:** The distribution shows a concentration of risky loans in the lower grades (E, F, G) and their corresponding sub-grades. This aligns with expectations as lower grades typically represent higher risk.
+ - **Loan Grades & Sub-Grades:** The distribution shows a concentration of risky loans in the lower grades (E, F, G) and their corresponding sub-grades. This aligns with expectations as lower grades typically represent higher risk.
 
- -   **Loan Status:** A significant portion of risky loans are either "Charged Off" (defaulted) or still "Current" (ongoing). This highlights the ongoing risk associated with these loans.
+ - **Loan Status:** A significant portion of risky loans are either "Charged Off" (defaulted) or still "Current" (ongoing). This highlights the ongoing risk associated with these loans.
 
- -   **Interest Rates:** Risky loans consistently have higher interest rates compared to non-risky loans, indicating the lender's assessment of increased risk.
+ - **Interest Rates:** Risky loans consistently have higher interest rates compared to non-risky loans, indicating the lender's assessment of increased risk.
     Loan Purposes: Debt consolidation and credit card loans appear to be the most common purposes for risky loans. This suggests that borrowers struggling with existing debt may be more likely to take on higher-risk loans.
 
- -   **State Distribution:** The distribution of risky loans across states is not uniform. Some states have a higher concentration of risky loans compared to others, potentially indicating regional differences in risk factors.
+ - **State Distribution:** The distribution of risky loans across states is not uniform. Some states have a higher concentration of risky loans compared to others, potentially indicating regional differences in risk factors.
 
     We can see that the majority of loans are for credit card debt consolidation, followed by other purposes such as home improvement and small business loans.
 
@@ -131,18 +131,18 @@ Conduct bivariate analysis to explore relationships between different variables 
 
   ### Correlation Heat Map (Numerical Features) Bivariate Analysis
 
- -  **Negative correlation between DTI and annual income (-0.11):** 
+ - **Negative correlation between DTI and annual income (-0.11):** 
 
     As income increases, the DTI ratio tends to decrease. A high DTI is a strong indicator of higher risk because it implies the borrower is already carrying a significant debt load relative to their income, which increases the likelihood of loan default.
 
     The weak positive correlation with loan amount (0.15) and revolving balance (0.26) also shows that higher loan amounts and higher balances tend to go hand-in-hand with a higher DTI, which is a risk factor for default.
 
--   **Correlation between loan_amnt and other variables:**
+- **Correlation between loan_amnt and other variables:**
 
     The loan amount (loan_amnt) has a moderate positive correlation with the interest rate (int_rate) at 0.30 and a slightly higher positive correlation with annual income (annual_inc) at 0.41.
     It also has moderate positive correlations with revolving balance (revol_bal) and total accounts (total_acc).
     
- -   **Interest rate correlations:**
+ - **Interest rate correlations:**
 
     The interest rate (int_rate) has a low positive correlation with loan amount (loan_amnt), but it has very low correlations with other variables like annual income (annual_inc) and revolving balance (revol_bal).
 
@@ -152,11 +152,11 @@ Conduct bivariate analysis to explore relationships between different variables 
 
 ### Correlation Heat Map (Categorical Features) Analysis
 
--    Debt consolidation is strongly associated with higher-risk borrowers (grades D, E, F, G and sub-grades D4, D5). Borrowers in these groups are likely facing financial struggles, making them higher-risk for loan defaults.
+- Debt consolidation is strongly associated with higher-risk borrowers (grades D, E, F, G and sub-grades D4, D5). Borrowers in these groups are likely facing financial struggles, making them higher-risk for loan defaults.
 
--    Home improvement and small business loans, while somewhat common across sub-grades, show lower frequencies in riskier grades. These loan purposes may still indicate a level of financial planning or stability, but they are less prominent in the high-risk groups.
+- Home improvement and small business loans, while somewhat common across sub-grades, show lower frequencies in riskier grades. These loan purposes may still indicate a level of financial planning or stability, but they are less prominent in the high-risk groups.
 
--    Credit card loans show a mixed frequency across grades and sub-grades. This could suggest that some borrowers in lower grades are using loans for credit-related needs, which can indicate over-reliance on credit, adding to the default risk.
+- Credit card loans show a mixed frequency across grades and sub-grades. This could suggest that some borrowers in lower grades are using loans for credit-related needs, which can indicate over-reliance on credit, adding to the default risk.
 
 ![alt text](image-30.png)
 

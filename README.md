@@ -101,6 +101,8 @@
 ![alt text](interestGradeBox.png)
 ![alt text](interestSubgrade.png)
 ![alt text](interestLoanStatusBox.png)
+![alt text](irOwnershipBox.png)
+![alt text](interestRatePurposeBox.png)
 
 - Conclusion from Scatter Plot Numerical Byvariate Analysis 5
 
@@ -125,7 +127,7 @@
 
     We can see that the majority of loans are for credit card debt consolidation, followed by other purposes such as home improvement and small business loans.
 
-![alt text](image-5.png)
+![alt text](image-31.png)
 
  - **Correlation Heat Map (Numerical Features) Bivariate Analysis**
 
@@ -156,7 +158,7 @@
 
     Credit card loans show a mixed frequency across grades and sub-grades. This could suggest that some borrowers in lower grades are using loans for credit-related needs, which can indicate over-reliance on credit, adding to the default risk.
 
-![alt text](image-8.png)
+![alt text](image-30.png)
 
 - Conclusion from the Revolving Utilization Heatmap Analysis 7
 
@@ -187,7 +189,7 @@
     Borrowers in sub-grades G2, G3, and G4 are outliers with dangerously high utilization, particularly for charged-off and current loans.
 
 
-![alt text](image-9.png)
+![alt text](image-32.png)
 
 - Conclusion from the Box Plot (Loan Status vs Revolving Utilization) Analysis 8
 
@@ -304,12 +306,7 @@
 
     ![alt text](image-29.png)
 
-- Conclusion from  final Analysis
-
-
-
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
-
 
 ## Technologies Used
 - python - version 3.12.4
@@ -321,19 +318,16 @@
 - Anaconda Navigator 2.6.3
 - Visual Studio Code 1.96.0
 
-
 <!-- As the libraries versions keep on changing, it is recommended to mention the version of library used in this project -->
 
 ## Acknowledgements
 Give credit here.
 - This project was inspired by...
 - References if any...
-- This project was based on [this tutorial](https://www.example.com).
-
+- This project was based on [this tutorial](https://www.upgrad.com/).
 
 ## Contact
-Created by [@githubusername] - feel free to contact me!
-
+Created by [Niranjan Singh and  ] - feel free to contact me!
 
 <!-- Optional -->
 <!-- ## License -->

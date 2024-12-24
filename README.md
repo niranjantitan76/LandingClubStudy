@@ -23,8 +23,8 @@
 
     Understanding the driving factors (or driver variables) behind loan default, i.e. the variables which are strong indicators of default.
 ## Problem Statement:
-
-    Conduct a comprehensive analysis of a dataset containing consumer attributes and loan attributes. Our goal is to gain insights into the factors influencing loan default rates and to develop strategies to mitigate risks associated with lending.
+    Conduct a comprehensive analysis of a dataset containing consumer attributes and loan attributes. 
+    Our goal is to gain insights into the factors influencing loan default rates and to develop strategies to mitigate risks associated with lending.
 - What is the dataset that is being used?
 
     The dataset contains information about past loan applicants and whether they ‘defaulted’ or not. The aim is to identify patterns which indicate if a person is likely to default, which may be used for taking actions such as denying the loan, reducing the amount of loan, lending (to risky applicants) at a higher interest rate, etc.

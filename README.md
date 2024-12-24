@@ -87,15 +87,11 @@ Conduct bivariate analysis to explore relationships between different variables 
 ## Conclusion from Box Plot (Interest Rate by Grade,  Sub Grade and Loan Status) Byvariate Categorical Analysis 4 
 
  - **High-Risk Grades (E, F, G):**
-
+ 
     High median interest rates, reflecting the high likelihood of default.
-
     Wider IQR and more outliers, signaling a significant variability in risk levels.
-
     These grades represent borrowers with poor credit histories or unstable incomes.
-
     Lenders face a high risk of non-payment, which is offset by charging much higher interest rates.
-
     Current and default loan staus have highr interest rates than fully paid.
 
 ![alt text](interestGradeBox.png)

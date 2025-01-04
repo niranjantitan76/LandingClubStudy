@@ -2,7 +2,7 @@
 > EDA - Landing Club case study
 
 
-## Table of Contents
+# Table of Contents
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
 * [Conclusions](#conclusions)
@@ -10,7 +10,7 @@
 
 <!-- You can include any other section that is pertinent to your problem -->
 
-## General Information
+# General Information
 - Provide general information about your project here.
 
     This company is the largest online loan marketplace, facilitating personal loans, business loans, and financing of medical procedures. Borrowers can easily access lower interest rate loans through a fast online interface. 
@@ -19,17 +19,76 @@
     Like most other lending companies, lending loans to ‘risky’ applicants is the largest source of financial loss (called credit loss). Credit loss is the amount of money lost by the lender when the borrower refuses to pay or runs away with the money owed. In other words, borrowers who default cause the largest amount of loss to the lenders. In this case, the customers labelled as 'charged-off' are the 'defaulters'.  
 
     If one is able to identify these risky loan applicants, then such loans can be reduced thereby cutting down the amount of credit loss. Identification of such applicants using EDA is the aim of this case study.
+
+    This project is  a Data Exploration project and tries to find as much findings as possible without the use of any Machine Learning and just simple plain EDA and Data Visualization.
+
 - What is the business probem that your project is trying to solve?
 
     Understanding the driving factors (or driver variables) behind loan default, i.e. the variables which are strong indicators of default.
-## Problem Statement:
-> Conduct a comprehensive analysis of a dataset containing consumer attributes and loan attributes. 
+# Problem Statement:
+    Conduct a comprehensive analysis of a dataset containing consumer attributes and loan attributes. 
     Our goal is to gain insights into the factors influencing loan default rates and to develop strategies to mitigate risks associated with lending.
+
+    Lending loans to "risky" applicants is the leading cause of financial loss, commonly referred to as credit loss, for banks and lending companies. By identifying these high-risk loan applicants, lenders can reduce the approval of such loans, thereby minimizing credit loss. This case study aims to leverage data analysis to identify and understand the characteristics of these risky applicants.
+    By gaining insights into these factors, the company can enhance its portfolio management and risk assessment processes.
+
+    There are two key risks associated with the bank's loan approval decisions:
+
+    Loss of Business: If an applicant is likely to repay the loan, but the loan is not approved, it results in a missed business opportunity.
+    
+    Financial Loss: If an applicant is unlikely to repay the loan (i.e., is likely to default), approving the loan may lead to significant financial losses.
+    
+    This study aims to balance these risks by identifying patterns in the data to improve decision-making in loan approvals.
+
 - What is the dataset that is being used?
 
     The dataset contains information about past loan applicants and whether they ‘defaulted’ or not. The aim is to identify patterns which indicate if a person is likely to default, which may be used for taking actions such as denying the loan, reducing the amount of loan, lending (to risky applicants) at a higher interest rate, etc.
 
-## Objective
+    **Key Columns**
+
+    The provided columns represent crucial predictors of loan outcomes. These attributes, collected during the loan application process, play a vital role in determining the likelihood of loan approval or rejection. By analyzing these factors, lenders can assess borrower risk and make informed lending decisions.
+
+   **Borrower Characteristics**
+
+   **Annual Income (annual_inc):** A key factor in creditworthiness, reflecting the borrower's earning capacity. Higher income generally increases loan approval likelihood.
+
+    **Home Ownership (home_ownership):** Indicates ownership status (e.g., mortgage, rent, own). Homeownership often signals stability and can improve loan approval chances.
+
+    **Employment Length (emp_length):** Represents the duration of the borrower's current employment. Longer tenures suggest greater financial stability and reduce loan risk.
+
+    **Debt-to-Income Ratio (dti):** Measures the proportion of monthly income used for debt repayment. Lower DTI indicates lower financial burden and increases approval likelihood.
+
+    **State (addr_state):** Represents the borrower's location, enabling regional analysis of delinquency and default rates.
+
+    **revol_util:** Revolving line utilization rate, or the amount of credit the borrower is using relative to all available revolving credit.
+    
+    **Loan Characteristics**
+
+    **Loan Amount (loan_amt):** The amount of money borrowed, impacting both risk and potential return for the lender.
+
+    **Grade (grade):** A creditworthiness rating assigned to the loan, reflecting the perceived level of risk. Higher grades generally indicate lower risk.
+
+    **Sub Grade (sb_grade):** A creditworthiness sub rating assigned to the loan, reflecting the perceived level of risk. Higher sub grades generally indicate lower risk.
+
+    **Verification Status (verification_status):** Indicates the level of income and employment verification conducted by the lender, influencing trust and risk assessment.
+
+    **Term (term): **The loan's duration in months, influencing both interest payments and overall repayment burden.
+
+    **Issue Date (issue_d):** The date the loan was originated, allowing for time-series analysis of loan performance.
+
+    **Interest Rate (int_rate):** The annual percentage rate charged on the loan, reflecting the borrower's perceived risk.
+
+    **Installment (installment):v The fixed monthly payment required to repay the loan over the specified term.
+
+    **Purpose (purpose):** The intended use of the loan (e.g., debt consolidation, home improvement). Different purposes may carry varying levels of risk.
+
+    **Public Records (public_rec):** The number of negative public records (e.g., judgments, liens) associated with the borrower, increasing loan risk.
+    
+    **Recoveries:** post charge off gross recovery
+    
+    **Public Records Bankruptcy (public_rec_bankruptcy):** The number of bankruptcy filings on the borrower's record, significantly impacting creditworthiness and loan approval likelihood.
+
+# Objective
 
 - **Importing necessary Modules**:
 Import the modules necessary for Data Manipulation and Visualization.
@@ -56,230 +115,148 @@ Identify and analyze outliers within the dataset to understand their impact on t
 Conduct bivariate analysis to explore relationships between different variables and their impact on loan default rates.
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
-## Conclusions
-## Conclusion from the Categorical Univariate Analysis -1
+# Conclusions
 
--    Most of the loans comes under Grade and Subgrade A, B and C. 
+## Risk Assessment and Recommendations
 
--    Majority of loans had been issued in year 2011 and Jun-Dec months.
+## Grades B, C, and D 
 
--    California and Newyork state has the highest no of loans issued.
+Grades B, C, and D have the highest "Charged Off" loans.Lower grades (B-1396,C-1313,D-1085) exhibit a higher proportion of "Charged Off" loans, suggesting a higher risk of default for borrowers with lower creditworthiness.
 
-![alt text](image-1.png)
+**Recommendation:** 
+- Reassess the risk evaluation criteria for grades B and C to better distinguish higher-risk borrowers.
+- Implement stricter risk assessment and underwriting criteria for applicants in these grades. Utilize additional credit metrics, such as repayment history, to screen high-risk applicants more effectively.
+## Subgrades C1, C2, B3, B4, and B5
 
-## Conclusion from the Univariate Numerical Analysis 2
+Subgrades C1,C2, B3, B4, and B5 show a higher likelihood of defaults.Higher default tendencies in specific sub-grades indicate a need for more granular underwriting policies.
 
-- **High Loan Amounts:** The right-skewed distribution of loan_amnt suggests that a significant proportion of loans are for larger amounts. Larger loans generally carry higher risk due to the potential for larger losses in case of default.
+**Recommendation:** Focus on applicants in these subgrades by: 
+- Offering smaller loan amounts.
+- Introducing risk-based pricing with higher interest rates to offset potential losses.
+- Providing pre-loan financial counseling.
 
-- **High Interest Rates:** The right-skewed distribution of int_rate indicates that a portion of loans have significantly higher interest rates. These loans are often associated with higher risk borrowers and may have a higher likelihood of default.
+## States
 
-- **Income Distribution:** The right-skewed distribution of annual_inc suggests that a majority of borrowers have lower incomes. Borrowers with lower incomes may have limited capacity to repay loans, particularly if they have taken on larger amounts or have high interest rates.
+Applicants from states like California (CA), Florida (FL), and New York (NY) show higher default tendencies. Geographic concentration of risky loans could lead to localized portfolio risk exposure.
 
-![alt text](image-5.png)
+**Recommendation:**
 
-## Conclusion from Pie Plot (Loan Status, Grades and Purpose) Categorical Univariate Analysis 3
-    This visualization can help us understand the proportion of loans that have been fully paid, charged off, or are currently in progress. 
-    - We can see that the majority of loans have been fully paid.
-    - Most of the loans are for debt consolidation
+- Introduce geographically adjusted lending strategies.
+- Implement state-level risk mitigation strategies, such as stricter approval criteria for high-risk states.
 
-![alt text](image-7.png)
+## Interest Rate Comparison 
 
-## Conclusion from Box Plot (Interest Rate by Grade,  Sub Grade and Loan Status) Byvariate Categorical Analysis 4 
+Risky loans are associated with higher interest rates compared to non-risky loans, but the spread between the two categories suggests that some risky loans may still be underpriced. Higher rates on risky loans might indicate an attempt to offset the increased probability of default, but affordability issues may arise.
 
- - **High-Risk Grades (E, F, G):**
+**Recommendation:** Optimize pricing strategies for high-risk loans to balance profitability and affordability.
 
-    High median interest rates, reflecting the high likelihood of default.
-    Wider IQR and more outliers, signaling a significant variability in risk levels.
-    These grades represent borrowers with poor credit histories or unstable incomes.
-    Lenders face a high risk of non-payment, which is offset by charging much higher interest rates.
+## Loan Status Distribution 
 
- - **Current and default loan staus have highr interest rates than fully paid.**
- - **Analysis reveals significant variation in interest rates depending on the loan purpose. Notably, Debt Consolidation and Small Business loans tend to have higher interest rates compared to other loan categories.**
+Most risky loans have been fully paid, but a significant proportion are charged off or currently delinquent. Charged-off loans highlight direct financial losses.
+**Recommendation:** Focus on early warning signals to predict potential defaults and prevent charge-offs.
 
-![alt text](interestGradeBox.png)
-![alt text](interestSubgrade.png)
-![alt text](interestLoanStatusBox.png)
-![alt text](irOwnershipBox.png)
-![alt text](interestRatePurposeBox.png)
+## DTI Ratios and Interest Rates
 
-## Conclusion from Scatter Plot Numerical Byvariate Analysis 5
+Most loans have interest rates between 10% and 20%. Borrowers with rates above 15% might have higher default risks due to affordability issues.
 
- - **Weak Correlation:**
+**Recommendation:**
+- Adjust interest rates based on borrower DTI ratios.
+- Cap DTI ratios for loan approvals or offer smaller loan amounts for borrowers with high DTI.
+- Ensure that interest rates align with the borrower’s repayment capacity.
 
-    The plot suggests no strong relationship between annual income and loan amount. Borrowers with similar incomes might request vastly different loan amounts.
+## Term Length
 
-    By analyzing these metrics together, you can assess the likelihood of a loan becoming risky or defaulting.  High late fees, outstanding principal, and low recoveries, it signals a larger risk to lenders and investors.
+Applicants opting for 60-month loans are more likely to default.
 
-![alt text](image-4.png)
+**Recommendation:**
 
-## Conclusion from Univariate and Byvariate Analysis 6 (Risky Loans) 
+- Evaluate the risks of longer-term loans and consider limiting the maximum term.
+- Offer 60-month loans at higher interest rates to account for elevated risk.
 
- - **Loan Grades & Sub-Grades:** The distribution shows a concentration of risky loans in the lower grades (E, F, G) and their corresponding sub-grades. This aligns with expectations as lower grades typically represent higher risk.
+## Applicant Experience
 
- - **Loan Status:** A significant portion of risky loans are either "Charged Off" (defaulted) or still "Current" (ongoing). This highlights the ongoing risk associated with these loans.
+Applicants with 10+ years of experience are more prone to defaults, suggesting experience is not a standalone creditworthiness indicator.
 
- - **Interest Rates:** Risky loans consistently have higher interest rates compared to non-risky loans, indicating the lender's assessment of increased risk.
- 
- - **Loan Purposes:** Debt consolidation and credit card loans appear to be the most common purposes for risky loans. This suggests that borrowers struggling with existing debt may be more likely to take on higher-risk loans.
+**Recommendation:** 
+- Use a comprehensive credit scoring system that includes factors such as income, DTI ratio, and past loan behavior.
+## Market Trend
 
- - **State Distribution:** The distribution of risky loans across states is not uniform. Some states have a higher concentration of risky loans compared to others, potentially indicating regional differences in risk factors.
+Loan applications have steadily increased between 2007 and 2011, indicating market growth.
 
-- **Home Owners** We can see that the majority of loans are under rented and mortgage ownership.
+**Recommendation:** Continue leveraging this growth by:
+- Maintaining competitive rates and efficient loan processing.
+- Enhancing risk management practices to sustain profitability.
+## Loan Demand
 
-![alt text](image-31.png)
+*Q4 and December see a peak in loan applications, likely due to holiday-related spending.
 
-  ### Correlation Heat Map (Numerical Features) Bivariate Analysis
+**Recommendation:** 
+Prepare for seasonal demand surges by:
+- Allocating additional resources to ensure timely processing.
+- Offering promotional rates or tailored products during peak seasons.
+## Debt Consolidation Loans
 
- - **Negative correlation between DTI and annual income (-0.11):** 
+Debt consolidation accounts for the highest loan volume and default rates.
 
-    As income increases, the DTI ratio tends to decrease. A high DTI is a strong indicator of higher risk because it implies the borrower is already carrying a significant debt load relative to their income, which increases the likelihood of loan default.
+**Recommendation:**
+    - Apply stricter eligibility criteria for debt consolidation loans.
+    - Provide financial counseling to help applicants manage existing debts effectively.
+## Housing Status
 
-    The weak positive correlation with loan amount (0.15) and revolving balance (0.26) also shows that higher loan amounts and higher balances tend to go hand-in-hand with a higher DTI, which is a risk factor for default.
+Renters and mortgaged homeowners are more likely to default. Renters may face more financial instability compared to homeowners, while mortgage holders might be over-leveraged.
 
-- **Correlation between loan_amnt and other variables:**
+**Recommendation:** Include housing stability as a key factor in the underwriting process. 
+Consider:
 
-    The loan amount (loan_amnt) has a moderate positive correlation with the interest rate (int_rate) at 0.30 and a slightly higher positive correlation with annual income (annual_inc) at 0.41.
-    It also has moderate positive correlations with revolving balance (revol_bal) and total accounts (total_acc).
-    
- - **Interest rate correlations:**
+- Adjusting interest rates or loan amounts based on housing status.
+- Encouraging applicants to secure cosigners if housing status poses a risk.
+- Applicants with higher housing costs (Rent or Mortgage) may require lower loan amounts or higher scrutiny.
+## Verification Process
 
-    The interest rate (int_rate) has a low positive correlation with loan amount (loan_amnt), but it has very low correlations with other variables like annual income (annual_inc) and revolving balance (revol_bal).
+Verified applicants are defaulting more frequently than unverified ones.
 
-    The heatmap reveals that loan size, DTI, and revolving balance are strong indicators of risk. Larger loans, higher DTI ratios, and high revolving balances tend to increase the likelihood of default, while high income and low DTI ratios can mitigate this risk. Lenders should focus on these variables when assessing borrower risk to better predict the likelihood of loan repayment.
+**Recommendation:** Review the current verification process to:
 
-![alt text](image-2.png)
+- Improve its accuracy in identifying risky borrowers.
+- Incorporate additional metrics, such as alternative credit data.
 
-### Correlation Heat Map (Categorical Features) Analysis
+## Loan Amounts
 
-- Debt consolidation is strongly associated with higher-risk borrowers (grades D, E, F, G, sub-grades D4, D5). Borrowers in these groups are likely facing financial struggles, making them higher-risk for loan defaults.
-- Debt consolidation is the primary purpose driving risky loans, often concentrated among renters and mortgaged homeowners.
-- Renters exhibit higher risk levels compared to homeowners, which aligns with their larger proportion of "Charged Off" loans.
+Applicants with loan amounts of $15,000 or higher are more likely to default.
 
-![alt text](image-30.png)
+**Recommendation:**
 
-## Conclusion from the Revolving Utilization Heatmap Analysis 7
-  
-- **Revolving Utilization and Loan Status:** The heatmaps clearly show that revolving utilization tends to be higher for "Charged Off" loans compared to "Current" and "Fully Paid" loans across various categories (grade, sub-grade, purpose, home ownership).
-- **Grade and Sub-Grade:** Revolving utilization generally increases as the loan grade and sub-grade deteriorate (from A to G). This is consistent with the expectation that higher-risk borrowers tend to have higher credit utilization.
-- **Loan Purpose:** The heatmaps reveal that some loan purposes, such as "credit_card" and "debt_consolidation," tend to have higher revolving utilization compared to others. This suggests that borrowers taking out these types of loans might have higher existing debt burdens.
-- **Home Ownership:** The heatmap for home ownership shows some interesting patterns. For instance, borrowers with "RENT" status seem to have higher revolving utilization compared to those with "MORTGAGE" or "OWN".
+- Set stricter caps on loan amounts for higher-risk borrowers.
+- Require additional collateral or cosigners for larger loans.
 
-![alt text](image-32.png)
+## Annual Income Levels
 
-### Conclusion from the Box Plot (Loan Status vs Revolving Utilization) Analysis
+Borrowers earning less than $38,000 annually have a higher likelihood of defaulting.
 
-- **Revolving Utilization and Loan Status:** The box plot clearly shows that "Charged Off" loans tend to have significantly higher revolving utilization compared to "Fully Paid" and "Current" loans. This suggests that borrowers with higher credit card debt relative to their credit limit are more likely to default on their loans
+**Recommendation:**
+- Provide financial education and budgeting resources for lower-income borrowers.
+- Restrict maximum loan amounts or shorten loan terms for low-income applicants.
+## Revolving Utilization (revol_util)
 
-![alt text](revolvingBox.png)
+Revolving utilization is distributed across a wide range, with many borrowers exceeding 50%.High utilization indicates greater dependence on credit, correlating with higher default likelihood.
 
-## Conclusion from the Bar Plot (Loan Status by Employment Length, Verification Status etc) analysis 8
+**Recommendation:** Reduce loan amounts or increase interest rates for high-utilization borrowers.
 
-- **Employment Length and Loan Status:**
-    
-    The chart reveals that the majority of loans are held by individuals with employment lengths of 10+ years and 1 year. However, the proportion of "Charged Off" loans seems to be slightly higher for individuals with shorter employment lengths (< 1 year).
+## Months Since Last Delinquency (mths_since_last_delinq)
 
-    The chart highlights how verification status varies across loan grades, reflecting different levels of borrower risk and lending practices:
+Many borrowers have had delinquencies within the past 60 months. Recent delinquencies are strong indicators of repayment challenges.
 
-    Grades A and B dominate in terms of the total number of loans issued. However, a significant portion of these loans is Not Verified, which could pose risks even for borrowers with strong profiles.
+**Recommendation:** Require additional proof of creditworthiness from borrowers with recent delinquencies.
 
-    Lower loan grades (E, F, G) exhibit a smaller volume of loans but show relatively higher proportions of Not Verified and Source Verified loans. This suggests a need for stricter verification processes to mitigate risk in these higher-risk categories.
+## Risky Loans by Purpose 
+- Debt consolidation and credit card refinancing are the top purposes for risky loans.
+- Home improvement and small business loans also show significant representation.
+- These categories often reflect financial distress or speculative investments.
 
-    Mid-range Grades (C and D) act as a transition point, where there is a more balanced distribution of verified and non-verified loans.
+**Recommendation:** Tighten evaluation for loans aimed at debt consolidation and small businesses, where risks are inherently higher.
 
-- **Fully Paid Loans:**
+Stricter Criteria for High Utilization Borrowers: Applicants with utilization rates above 50% should be closely monitored or required to lower their utilization before loan approval.
 
-    The majority of loans, across all verification statuses, are Fully Paid.
-    Loans classified as Not Verified have the highest count of fully paid loans, suggesting that verification status alone may not be a determinant of repayment success.
+Financial Counseling and Education: Provide resources to help borrowers manage credit utilization and understand its impact on loan approvals and creditworthiness.
 
-- **Charged Off Loans:**
-
-    Loans that are Not Verified have a slightly higher count of Charged Off loans compared to Source Verified and Verified loans.
-    This indicates a potential risk associated with loans that lack proper verification.
-
-- **Current Loans:**
-
-    Loans currently in repayment or ongoing status are relatively fewer across all verification statuses.
-    The proportion of Current Loans is consistent, suggesting that verification does not heavily influence ongoing repayments.
-
-    While most loans are fully paid, there is a higher proportion of charged-off loans among Not Verified loans, indicating a risk for lenders.
-
-    Strengthening verification measures might reduce defaults, even if not all loans are fully verified.
-    
-![alt text](image-6.png)
-![alt text](image-20.png)
-![alt text](image-21.png)
-![alt text](image-22.png)
-
-## Conclusion from Bar Plot (Loan Status by Home Ownership) Analysis 9
-
-- **Home Ownership and Interest Rates:** 
-    The box plot suggests a general trend that individuals with "NONE" or "OTHER" home ownership status tend to have lower interest rates compared to those who mortgage, rent, or own their homes.
-
-- **Variability:** There's significant variability in interest rates across all home ownership categories. This indicates that other factors besides home ownership likely influence interest rates.
-
-- **Outliers:** The presence of outliers suggests that some individuals within each category have interest rates that deviate significantly from the typical range.
-
-- **Home Ownership:** The chart suggests that individuals who rent or own their homes might have lower credit risk compared to those with "OTHER" or "NONE" home ownership status. This is because renting or owning a home often indicates financial stability and responsibility.
-
-- **Loan Status:** The presence of "Charged Off" loans across all home ownership categories indicates that credit risk exists regardless of home ownership status.
-
-![alt text](image-23.png)
-![alt text](image-24.png)
-![alt text](image-25.png)
-![alt text](image-26.png)
-
-## Conclusion from the Bar Chart (Bankruptcies and Loan Status) Analysis  10
-
-- **Bankruptcies and Loan Status:** The chart shows a clear trend: as the number of public record bankruptcies increases, the proportion of "Charged Off" loans also increases. This suggests that borrowers with a history of bankruptcies are more likely to default on their loans.
-
- - **Loan Distribution:** The vast majority of loans are held by individuals with no public record bankruptcies. The number of loans decreases significantly as the number of bankruptcies increases.
-
-![alt text](image-3.png)
-
-## Conclusion from the box plot Recovery Rate Analysis 11
-
- - **Low Recovery Rates:** The box plot indicates that recoveries for "Charged Off" loans are generally low. This highlights the significant credit risk associated with these loans and the potential for substantial losses for the lender.
-
-![alt text](image-28.png)
-
-## Conclusion from the Scatter Plot Analysis 12
-
--    Loan repayment (total_pymnt) strongly depends on the funded amount.
-
--   Interest rates are relatively independent of borrowers’ annual income, suggesting risk assessment uses other factors.
-
- - **High Revolving Balance & Utilization:** A high revol_bal coupled with a high revol_util suggests that borrowers are heavily utilizing their available credit. This could indicate financial strain and a higher risk of default.
-
- - **Low Income:** Borrowers with low annual_inc might have limited capacity to repay loans, particularly if they have taken on large funded_amnt.
- - **Loan Size:** Large funded_amnt loans generally carry higher risk due to the potential for larger losses in case of default.
-
-![alt text](image-29.png)
-
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
-
-## Technologies Used
-- python - version 3.12.4
-- pandas - version 2.2.2
-- matplotlib - version 3.8.4
-- seaborn - version 0.13.2
-- Plotly 5.22.0
-- Jupyter Notebook
-- Anaconda Navigator 2.6.3
-- Visual Studio Code 1.96.0
-
-<!-- As the libraries versions keep on changing, it is recommended to mention the version of library used in this project -->
-
-## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- References if any...
-- This project was based on [this tutorial](https://www.upgrad.com/).
-
-## Contact
-Created by [Niranjan Singh and Ameya Parab ] - feel free to contact me!
-
-<!-- Optional -->
-<!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
-
-<!-- You don't have to include all sections - just the one's relevant to your project -->
+Dynamic Interest Rates: Adjust interest rates based on revolving utilization levels, with higher rates for higher utilization borrowers to offset risk.

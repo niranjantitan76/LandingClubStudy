@@ -72,13 +72,13 @@
 
     **Verification Status (verification_status):** Indicates the level of income and employment verification conducted by the lender, influencing trust and risk assessment.
 
-    **Term (term): **The loan's duration in months, influencing both interest payments and overall repayment burden.
+    **Term (term):** The loan's duration in months, influencing both interest payments and overall repayment burden.
 
     **Issue Date (issue_d):** The date the loan was originated, allowing for time-series analysis of loan performance.
 
     **Interest Rate (int_rate):** The annual percentage rate charged on the loan, reflecting the borrower's perceived risk.
 
-    **Installment (installment):v The fixed monthly payment required to repay the loan over the specified term.
+    **Installment (installment):** The fixed monthly payment required to repay the loan over the specified term.
 
     **Purpose (purpose):** The intended use of the loan (e.g., debt consolidation, home improvement). Different purposes may carry varying levels of risk.
 

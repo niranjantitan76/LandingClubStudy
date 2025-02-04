@@ -260,3 +260,28 @@ Stricter Criteria for High Utilization Borrowers: Applicants with utilization ra
 Financial Counseling and Education: Provide resources to help borrowers manage credit utilization and understand its impact on loan approvals and creditworthiness.
 
 Dynamic Interest Rates: Adjust interest rates based on revolving utilization levels, with higher rates for higher utilization borrowers to offset risk.
+
+## Technologies Used
+- numpy
+- pandas
+- seaborn
+- matplotlib
+- statsmodels
+- sklearn
+- Visual Studio Code
+- Anaconda
+- Python Notebook
+- Python 3.12.4
+
+<!-- As the libraries versions keep on changing, it is recommended to mention the version of library used in this project -->
+
+## Acknowledgements
+Give credit here. https://www.upgrad.com/
+- This project was inspired by...http://dx.doi.org/10.1007/s13748-013-0040-3,
+- References if any...
+- This project was based on Upgrad and IIIT Banglore facultie's recommendation.
+
+
+## Contact
+Created by [@[niranjansingh](https://www.linkedin.com/in/niranjan-singh-56659151?)]- - feel free to contact me!
+
